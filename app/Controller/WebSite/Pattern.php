@@ -35,4 +35,11 @@
       ]);
     }
 
+    /**
+     * Método responsável por retornar view
+     * @return string
+     */
+    public static function getErr404() {
+      return View::render('website/404', []);
+    }
   }

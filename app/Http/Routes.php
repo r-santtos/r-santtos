@@ -166,7 +166,8 @@
         }
       }
       // URL 404
-      throw new Exception("Erro 404", 404);
+      header('Location: /404');
+      exit;
     }
 
     /**
