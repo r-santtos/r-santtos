@@ -24,7 +24,7 @@
      */
     private static function getContentView($view) {
       $file = __DIR__.'/../../resources/view/'.$view.'.html';
-      $files = __DIR__.'/../../resources/view/pages/404.html';
+      $files = __DIR__.'/../../resources/view/website/404.html';
       
       return file_exists($file) ? file_get_contents($file) : file_get_contents($files);
     }

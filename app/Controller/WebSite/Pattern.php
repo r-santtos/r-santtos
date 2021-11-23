@@ -1,10 +1,10 @@
 <?php 
 
-  namespace App\Controller\Pages;
+  namespace App\Controller\WebSite;
 
   use \App\Utils\View;
 
-  class Page {
+  class Pattern {
     /**
      * RETURN HEADER
      * @return string
@@ -25,8 +25,8 @@
      * Método responsável por retornar view
      * @return string
      */
-    public static function getPage($header, $content) {
-      return View::render('pages/page', [
+    public static function getPattern($header, $content) {
+      return View::render('website/pattern', [
         'title' => $header[0],
         'description' => $header[1],
         'header'=> self::getHeader(),

@@ -1,11 +1,11 @@
 <?php 
 
-  namespace App\Controller\Pages;
+  namespace App\Controller\WebSite;
 
   use \App\Utils\View;
   use \App\Model\Entity\ReturnDB;
 
-  class Home extends Page {
+  class Home extends Pattern {
     /**
      * Método responsável por retornar view
      * @return string
@@ -18,13 +18,13 @@
       $header = ["title", "description"];
 
       // Retorna a view home
-      $content = View::render('pages/home', [
+      $content = View::render('website/home', [
         'title' => $database->title,
         'description' => 'Texto vem aqui'
       ]);
 
-      // retorna a view page
-      return parent::getPage($header, $content);
+      // retorna a view Pattern
+      return parent::getPattern($header, $content);
     }
 
   }

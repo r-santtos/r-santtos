@@ -1,8 +1,8 @@
 <?php
-/* Informa o nível dos erros que serão exibidos */
-/* Habilita a exibição de erros */
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+  /* Informa o nível dos erros que serão exibidos */
+  /* Habilita a exibição de erros */
+  error_reporting(E_ALL);
+  ini_set("display_errors", 1);
 
   require __DIR__.'/vendor/autoload.php';
 
@@ -20,7 +20,7 @@ ini_set("display_errors", 1);
   $objectRouter = new Routes(URL);
 
   // INCLUDE ROUTES
-  include __DIR__.'/routes/pages.php';
+  include __DIR__.'/routes/pattern.php';
 
   // Imprime rota 
   $objectRouter->run()->sendResponse();
