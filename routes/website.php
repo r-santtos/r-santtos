@@ -11,9 +11,16 @@
     ]);
 
     /** ROTA ARTICLES */
-    $objectRouter->get('/artigos/{idPage}', [
-      function($idPage) {
-        return new Response(200,WebSite\Articles::getArticles($idPage));
+    $objectRouter->get('/artigos/{category}/{pageTitle}', [
+      function($category,$pageTitle) {
+        return new Response(200,WebSite\Articles::getPageArticle($category,$pageTitle));
+      }
+    ]);
+
+    /** ROTA DOC */
+    $objectRouter->get('/doc/{programmingLanguage}/{pageTitle}', [
+      function($programmingLanguage,$pageTitle) {
+        return new Response(200,WebSite\Doc::getPageDoc($programmingLanguage,$pageTitle));
       }
     ]);
     

@@ -5,12 +5,12 @@
   use \App\Utils\View;
   use \App\Model\Entity\ReturnDB;
 
-  class Articles extends PatternPage {
+  class Doc extends PatternPage {
     /**
      * Método responsável por retornar view
      * @return string
      */
-    public static function getPageArticle($category,$pageTitle) {
+    public static function getPageDoc($programmingLanguage,$pageTitle) {
       // Classe que retorna os dados do database 
       $database = new ReturnDB;
 
@@ -21,15 +21,15 @@
          * $header[1] = description
          */ 
         $header = [
-          "Articles", 
+          "Doc", 
           "description"
         ];
 
         // Retorna a view
-        $content = View::render('website/artigos', [
+        $content = View::render('website/doc', [
           'title' => $database->title,
           'description' => 'Texto vem aqui',
-          'category' => $category,
+          'programmingLanguage' => $programmingLanguage,
           'pageTitle' => $pageTitle
         ]);
 

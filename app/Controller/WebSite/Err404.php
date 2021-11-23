@@ -4,7 +4,7 @@
 
   use \App\Utils\View;
 
-  class Err404 extends Pattern {
+  class Err404 extends PatternPage {
     /**
      * Método responsável por retornar view
      * @return string
@@ -14,5 +14,4 @@
       // retorna a view page
       return parent::getErr404();
     }
-
   }
