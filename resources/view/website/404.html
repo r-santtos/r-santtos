@@ -1,12 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page 404</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Oops! Error 404..." />
+    <link rel="shortcut icon" href="/view/images/favicon.png" type="image/png" />
+    <title>Oops! Error...</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+      * {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        outline: none;
+        font-size: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: var(--text);
+      }
+
+      :root {
+        --background:#fff;
+      }
+
+      body, html {
+        background-color: var(--background);
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a {
+        width: auto;
+        color: inherit;
+        align-self: start;
+      }
+
+      a:hover {
+        transition: 0.6s;
+        opacity: 0.6;
+      }
+      button {cursor: pointer;}
+
+      #error {
+        height: 100vh;
+        padding: 10%;
+      }
+      #error h2 {
+        font-size: 5rem;
+      }
+      #error a {
+        background-color: #30333c;
+        color: #fff;
+        padding: 8px 24px;
+        margin-top: 16px;
+        border-radius: 4px;
+      }
+    </style>
+
 </head>
 <body>
-  <h1>Page 404</h1>
+  <main id="error" class="container">
+    <div class="container txt">
+      <h2>404</h2>
+      <h3>Oops! Erro...</h3>
+      <p>Essa página não exite!</p>
+      <a href="/">Voltar</a>
+    </div>
+  </main>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9CDNZWCVE6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9CDNZWCVE6');
+  </script>
 </body>
 </html>
