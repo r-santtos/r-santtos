@@ -1,0 +1,186 @@
+/* IMPORT GLOBAL CSS */
+@import url("/resources/view/_styles/global.css");
+html, body {
+  background-color: #242629;
+}
+#main {
+  padding: 5%;
+}
+h3 {
+  color: #fff;
+  max-width: 500px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  background-color: #16161A;
+  padding: 16px;
+}
+/* HOME */
+#home {
+  max-width: 500px;
+  position: relative;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background-color: #16161A;
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+}
+#home h2 {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 16px;
+  text-transform: uppercase;
+}
+#home img {
+  max-width: 80px;
+  min-width: 80px;
+  max-height: 80px;
+  min-height: 80px;
+  border-radius: 50%;
+}
+#home .social {
+  margin-top: 16px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#home .social a {
+  max-width: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  min-height: 40px;
+  border-radius: 8px;
+  background-color: #242629;
+  padding: 4px;
+}
+
+/* TIMES CONTAINER */
+#times {
+  max-width: 500px;
+  margin-bottom: 16px;
+}
+#times .time-box {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #16161A;
+  color: #fff;
+}
+
+#times .time-box .right .box-right{
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+}
+#times .time-box .right .number {
+  max-width: 100px;
+  min-height: 100px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 80%;
+}
+#days, #hours, #minutes, #seconds {
+  font-size: 200%;
+}
+#times .time-box .right .points {
+  max-width: 100px;
+  color: rgb(44, 182, 125);
+  font-weight: bold;
+  font-size: 150%;
+}
+#times .time-box .right .last {
+  display: none;
+}
+#times .time-bar {
+  padding: 15px;
+  background-color: #242629;
+  border-radius: 8px;
+}
+#times .time-bar p {
+  font-weight: 600;
+}
+#times .line-one {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  align-items: flex-start;
+  border-radius: 5px;
+  background-color: #5C6577;
+}
+#times .line-two {
+  width: 0;
+  height: 4px;
+  background-color: rgb(44, 182, 125);
+  border-radius: 5px;
+  transition: 0.6s;
+}
+#links {
+  max-width: 500px;
+  background-color: #16161A;
+  border-radius: 8px;
+  padding: 16px;
+  height: 200px;
+}
+#links a {
+  width: 100%;
+  height: 100%;
+  padding: 8px 16px;
+  background-color: #242629;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+#links a:last-child {
+  margin-bottom: 0px;
+}
+
+#footer {
+  height: 50px;
+  color: rgb(44, 182, 125);
+  background-color: #16161A;
+}
+#footer p {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+/* MEDIA CSS */
+/* @media (max-width: 700px) and (orientation: landscape) {} */
+/* @media (min-width: 700px) and (orientation: landscape) {} */
+/* @media (min-width: 700px) and (orientation: landscape) {} */
+
+/* MEDIA CSS */
+@media (orientation: landscape) {
+  #times .time-box {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  #times .tech-icons {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 700px) {
+  #times .time-box .right .box-right {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  #times .time-box .right .last {
+    display: flex;
+  }
+  #links {
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #links a {
+    margin-bottom: 0px;
+    width: calc(50% - 8px);
+  }
+}

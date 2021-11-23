@@ -1,0 +1,35 @@
+{
+  "name": "RSANTTOS",
+  "short_name": "@RSANTTOS",
+  "icons": [{
+    "src": "/view/images/icons/128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "/view/images/icons/144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "/view/images/icons/152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": "/view/images/icons/192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }, {
+      "src": "/view/images/icons/256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }, {
+      "src": "/view/images/icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }],
+  "start_url": "https://rsanttos.com.br",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1e2128",
+  "theme_color": "#1e2128"
+}
