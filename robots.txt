@@ -1,0 +1,7 @@
+User-Agent: *
+
+Disallow: /apps/
+Disallow: /controller/
+Disallow: /model/
+
+Sitemap: https://rsanttos.com.br/sitemap.xml

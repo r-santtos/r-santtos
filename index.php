@@ -20,7 +20,7 @@
   $objectRouter = new Routes(URL);
 
   // INCLUDE ROUTES
-  include __DIR__.'/routes/pattern.php';
+  include __DIR__.'/routes/website.php';
 
   // Imprime rota 
   $objectRouter->run()->sendResponse();

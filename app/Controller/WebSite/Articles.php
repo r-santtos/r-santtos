@@ -5,22 +5,23 @@
   use \App\Utils\View;
   use \App\Model\Entity\ReturnDB;
 
-  class About extends Pattern {
+  class Articles extends Pattern {
     /**
      * Método responsável por retornar view
      * @return string
      */
-    public static function getAbout() {
+    public static function getArticles($idPage) {
       // Classe que retorna os dados do database 
       $database = new ReturnDB;
 
       // Dados para as tags dentro de head html
-      $header = ["About", "description"];
+      $header = ["Articles", "description"];
 
       // Retorna a view home
-      $content = View::render('website/about', [
+      $content = View::render('website/artigos', [
         'title' => $database->title,
-        'description' => 'Texto vem aqui'
+        'description' => 'Texto vem aqui',
+        'idPage' => $idPage
       ]);
 
       // retorna a view page
