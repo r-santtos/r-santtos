@@ -14,8 +14,8 @@
       // Classe que retorna os dados do database 
       $articles = SelectArticles::getArticles();
 
-      if ($category = $articles[0]->category && 
-          $pageTitle = $articles[0]->pageTitle) {
+      if ($category == $articles[0]->category && 
+          $pageTitle == $articles[0]->pageTitle) {
 
         // Dados para as tags dentro de head html 
         $header = [

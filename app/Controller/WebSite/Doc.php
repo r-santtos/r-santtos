@@ -3,7 +3,7 @@
   namespace App\Controller\WebSite;
 
   use \App\Utils\View;
-  use \App\Model\WebSite\SelectDoc;
+  use \App\Model\WebSite\SelectDocs;
 
   class Doc extends PatternPage {
     private static function getAside() {
@@ -16,8 +16,11 @@
      */
     public static function getPageDoc($programmingLanguage,$pageTitle) {
       // Classe que retorna os dados do database 
-      if ($programmingLanguage = $doc[0]->programmingLanguage && 
-          $pageTitle = $doc[0]->pageTitle) {
+      $doc = SelectDocs::getDocs();
+
+      // Classe que retorna os dados do database 
+      if ($programmingLanguage == $doc[0]->programmingLanguage && 
+          $pageTitle == $doc[0]->pageTitle) {
 
         $header = [
           // Conteúdo da tag <head>
