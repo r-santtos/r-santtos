@@ -1,5 +1,118 @@
-<h1>About {{title}}</h1>
+<main id="main" class="container">
+  <!-- DATE POST -->
+  <section id="tab" class="container">
+    <div class="container date-post" id="tab-date">
+      <p><time datetime="2021-11-07 23:00">Nov 07, 2021</time></p>
+      <div class="container btn-menu" onclick="openNav();">
+        <span class="container"></span>
+        <span class="container"></span>
+        <span class="container"></span>
+      </div>
+    </div>
+  </section>
 
-<h3>{{programmingLanguage}}</h3>
+  <!-- ADSENSES CONTAINER -->
+  <section id="adsenses" class="container">
 
-<h3>{{pageTitle}}</h3>
+  </section>
+
+  <!-- BOX ARTICLE CONTAINER -->
+  <section id="box-article" class="container">
+    <!-- ARTICLE CONTAINER -->
+    <article id="article" class="container">        
+      <!-- HEADER ARTICLE -->
+      <header id="header-article" class="container">
+        <h1>JavaScript, reduzindo dois anos de estudo para uma semana.</h1>
+        <p>Documentação reduzida com os principais recursos da linguagem JavaScript para uso com framework.</p>
+      </header>
+
+      <!-- POST CONTAINER -->
+      <div class="container post">
+        <p>Antes de começar quero deixar claro, ninguém vai aprender tudo sobre uma linguagem de programação, se alguém disser que sabe tudo, estará mentindo, agora se você colocar toda essa documentação em prática e repetir por um mês, você vai ser capaz de resolver 80% dos casos.</p>
+
+        <h2>O que é JavaScript?</h2>
+        <p>É uma linguagem de programação criada inicialmente para dar vida a páginas da web estáticas, é uma linguagem interpretada de tipagem fraca e multiparadigma. Tipagem fraca porque as variáveis ​​declaradas serão capazes de assumir valores de diferentes tipos de dados e realizar operações entre eles sem a necessidade de uma conversão. Multiparadigma por suportar vários paradigmas de programação, como programação funcional ou orientada a objetos.</p>
+
+        <p>Apesar de seu início focado no desenvolvimento web, a linguagem ao longo dos anos foi se atualizando e hoje está presente na criação de aplicativos móveis nativos utilizando um framework como o <span class="emphasis">React Native</span>, no desenvolvimento de aplicativos desktop utilizando <span class="emphasis">Electron</span>, no Back-end de aplicativos com <span class="emphasis">Node.Js</span> e até mesmo criando inteligência artificial usando <span class="emphasis">TensorFlow</span>.</p>
+
+        <p>Agora que você tem uma pequena ideia do que é JavaScript, você já sabe onde ele está presente e seu potencial, vamos da início aos códigos.</p>
+
+        <h2>Variáveis, <span class="emphasis">VAR</span>, <span class="emphasis">LET</span>, <span class="emphasis">CONST</span>, o que são e como criar?</h2>
+        <p>Em qualquer linguagem de programação, as variáveis ​​são uma forma de reservar um espaço na memória para armazenar e reutilizar dados durante o uso do aplicativo. Com o tempo, você descobrirá que as variáveis ​​podem conter mais do que apenas dados, por exemplo, podem conter funções.</p>
+      
+<!-- PRE CODE CONTAINER-->
+<pre>
+<code>
+<span class="comment">// Existem 3 maneiras de declarar uma variável JavaScript:</span>
+
+<span class="var">var</span> x <span class="var">=</span> <span class="number">1</span><span class="str">;</span>
+<span class="var">let</span> y <span class="var">=</span> <span class="str">"2";</span>
+<span class="var">const</span> xy <span class="var">=</span> <span class="str">"terceira forma";</span>
+
+</code>
+</pre>
+
+<!-- PRE CODE CONTAINER-->
+<p>A primeira forma de criar uma variável é usando <span class="emphasis">VAR</span>, esta também é a forma mais antiga da linguagem.</p>
+
+<pre>
+<code>
+<span class="comment">// Quando usado dessa forma, a variável acaba tendo seu escopo global.</span>
+
+<span class="var">var</span> x <span class="var">=</span> <span class="number">1</span><span class="str">;</span>
+
+</code>
+</pre>
+
+<!-- PRE CODE CONTAINER-->
+<p>A segunda forma é usando <span class="emphasis">LET</span>, que foi implementada a partir da versão ES2015.</p>
+
+<pre>
+<code>
+<span class="comment">// LET é usado dentro de uma função JavaScript, o que permite que seu escopo seja local.</span>
+
+<span class="var">var</span> xy <span class="var">=</span> <span class="number">10</span><span class="str">;</span>
+
+<span class="var">function</span> <span class="nameF">functionTest</span>(<span class="str">x,y</span>) {
+<span class="var">let</span> xy <span class="var">=</span> <span class="number">5</span><span class="str">;</span>
+<span class="var">return</span> <span class="str">x</span> <span class="var">+</span> <span class="str">y</span> <span class="var">-</span> <span class="str">xy;</span>
+}
+
+<span class="number">console</span>.<span class="span nameF">log</span>(<span class="nameF">functionTest</span>(<span class="number">4</span>,<span class="number">3</span>));
+
+</code>
+</pre>
+
+<p>Observe que <span class="var">XY</span> foi usado com <span class="emphasis">VAR</span> e <span class="var">XY</span> com <span class="emphasis">LET</span>, mas como mencionado antes, <span class="emphasis">LET</span> tem escopo local, então o resultado será <span class="number">2</span> em vez de <span class="number">-3</span>, isso acontece porque literalmente duas variáveis ​​foram criadas, com valores diferentes, porém como <span class="emphasis">LET</span> <span class="var">XY</span> foi definido dentro da função, o javascript entenderá que deve usar a variável de escopo local.</p>
+
+<pre>
+<code>
+<span class="comment">//E finalmente a variável CONST</span>
+
+<span class="var">const</span> xy <span class="var">=</span> <span class="str">"terceira forma";</span>
+
+</code>
+</pre>
+
+<p><span class="emphasis">CONST</span> tem comportamento semelhante a <span class="emphasis">LET</span>, a diferença é que seu valor não pode ser trocado por uma atribuição. Também tem escopo global, ou seja, ao declarar uma variável <span class="emphasis">CONST</span> fora da função, você terá acesso ao seu valor dentro da função, o que não acontece com <span class="emphasis">LET</span>.</p>
+
+        <p>Ao nomear variáveis ​​você deve seguir algumas regras, caso você não siga essas regras, ocorrerá um erro em sua aplicação.</p>
+
+        <ul>
+          <li style="margin-bottom: 8px;">Os Nomes podem conter letras, dígitos, sublinhados e cifrões.</li>
+          <li style="margin-bottom: 8px;">OS Nomes não podem iniciar com números.</li>
+          <li style="margin-bottom: 8px;">Os nomes são sensíveis a casos (y e Y são variáveis diferentes).</li>
+          <li style="margin-bottom: 8px;">As Palavras reservadas não podem ser usadas como nomes.</li>
+        </ul>
+      </div>
+
+      <section id="next-btn" class="container">
+        <button onclick="goBack()" class="btn">anterior</button>
+        <a href="../../../../../intl/pt-br/doc/javascript/objects/">próximo</a>
+      </section>
+    </article>
+
+    <!-- ASIDE CONTAINER -->
+    {{aside}}
+  </section>
+</main>

@@ -1,5 +1,113 @@
-<h1>About {{title}}</h1>
+<main id="main" class="container">
+  <!-- DATE POST -->
+  <section id="tab" class="container">
+    <div class="container date-post" id="tab-date">
+      <p><time datetime="2021-11-05 23:00">Nov 05, 2021</time></p>
+      <div class="container btn-menu" onclick="openNav();">
+        <span class="container"></span>
+        <span class="container"></span>
+        <span class="container"></span>
+      </div>
+    </div>
+  </section>
 
-<h3>{{category}}</h3>
+  <!-- ADSENSES CONTAINER -->
+  <section id="adsenses" class="container">
 
-<h3>{{pageTitle}}</h3>
+  </section>
+
+  <!-- BOX ARTICLE CONTAINER -->
+  <section id="box-article" class="container">
+    <!-- ARTICLE CONTAINER -->
+    <article id="article" class="container">        
+      <!-- HEADER ARTICLE -->
+      <header id="header-article" class="container">
+        <h1>Arquitetura de software, falando sobre microsserviços</h1>
+        <p>Respondendo às três perguntas mais feitas sobre microsserviços, o que é?, quando usá-lo? e o que são microsserviços?</p>
+      </header>
+
+      <!-- POST CONTAINER -->
+      <div class="container post">
+        <h2>O que é microsserviços?</h2>
+
+        <p>Dentro da arquitetura de software, microsserviços é um padrão adotado para gerenciar o desenvolvimento de programas de forma que cada função de uma aplicação seja o mais desacoplada possível. Exemplos do que seria um microsserviço dentro de um aplicativo, quando você entra em um aplicativo de compras, você tem a parte de gerenciamento de autenticação, gerenciamento de carrinho de compras, outra função para gerenciar o que apresentar ao cliente com base em seu comportamento, cada uma dessas funções é ou pode ser um microsserviço.</p>
+
+        <p>Com os microsserviços, um aplicativo corre menos rico de ficar totalmente inativo, isso acontece porque se um serviço cair, o resto do aplicativo ainda funcionará.</p>
+
+        <p>Microsserviços estão sendo adotados cada vez mais com o avanço da tecnologia e substituindo assim o padrão de desenvolvimento monolítico, onde tudo está agrupado em um único serviço.</p>
+
+        <h2>Quando usar microsserviços?</h2>
+
+        <p>No parágrafo anterior, você viu que os microsserviços estão cada vez mais substituindo o padrão monolítico, mas sejamos claros, isso não quer dizer que o padrão monolítico não faça sentido, como qualquer arquitetura, eles têm vantagens e desvantagens. Vou mostrar-lhe as vantagens e desvantagens do microsserviço e você, como um programador independente ou como uma equipe, tem a responsabilidade de tomar a decisão que melhor se adapta ao seu projeto.</p>
+
+        <h2>As vantagens</h2>
+
+        <p>Lançamento no mercado mais rápido, pois os ciclos de desenvolvimento são naturalmente encurtados devido ao fato de que a equipe pode desenvolver funções separadamente e, portanto, é totalmente compatível e de fácil implementação de metodologias ágeis.</p>
+
+        <p>Altamente escalável, isso significa que conforme a demanda por determinados serviços aumentam, você pode implementar uma infraestrutura que atenderá às necessidades exclusivas desse microsserviço que aumentou as solicitações. Um exemplo onde você pode ver bem essa vantagem é no dia da Black Friday, onde há um aumento da noite para o dia nas solicitações de determinados serviços.</p>
+
+        <p>Resiliente, se você ou sua equipe implementaram corretamente os microsserviços, seu funcionamento ou falha não interferirá no funcionamento de outros serviços e assim seu aplicativo continuará funcionando, ao contrário do modelo monolítico.</p>
+
+        <h2>As desvantagens</h2>
+
+        <p>Complexidade, mas não no sentido de implementação, mas sim de organização, sua equipe precisará ter mais cuidado para não se perder no meio do caminho.</p>
+
+        <p>Governança, segundo a Microsoft, “estabelecer alguns padrões para todo o projeto, sem restringir excessivamente a flexibilidade das equipes é um desafio”, pois como os microsserviços são destintos, porém, trabalham juntos na mesma aplicação, e por esse motivo a governança pode deixar a desejar.</p>
+
+        <p>Geração de logs em sistemas distribuídos é necessário ter um gerenciamento de logs centralizado para unificar tudo. Caso contrário, é praticamente impossível gerenciar de forma escalonável.</p>
+
+        <h2>Quais os tipos de microsserviços?</h2>
+
+        <p>1. Microsserviços Atômicos/Centrais (Core), esta é a camada mais baixa onde a lógica de negócios geralmente está concentrada.</p>
+
+        <p>2. Composição/Integração de Microsserviços, esses serviços são os que suportam uma parte significativa das funcionalidades do Enterprise Service Bus(ESB), como transformações, roteamento, padrões de estabilidade e resiliência, orquestração, etc.</p>
+
+        <p>3. Serviços de API/Serviços de Borda, por meio desses serviços, você ou sua equipe irão expor um conjunto de serviços compostos ou serviços atômicos como APIs. É nesta camada que você desenvolverá roteamento básico, controle de versão de API e implementará padrões de segurança de API.</p>
+
+        <img src="./microservices.png" alt="microservices.png" style="max-width: 800px;" />
+
+        <p>Imagens do modelo monolítico e do microsserviço para você entender visualmente a lógica por trás de cada um.</p>
+      </div>
+    </article>
+
+    <!-- ASIDE CONTAINER -->
+    <aside id="aside" class="container">
+      <div class="container global-aside">
+        <div class="container tab">
+          <a href="/" target="_blank" rel="noopener noreferrer">rsanttos</a>
+
+          <div class="container closeMenu" onclick="closeNav();">
+            <p>&#10008;</p>
+          </div>
+        </div>
+
+        <h3>Publicado por Ricardo</h3>
+        <ul class="container">
+          <li class="container">
+            <a 
+              href="https://www.instagram.com/rsanttos89/"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >Instagram</a>
+          </li>
+
+          <li class="container">
+            <a 
+              href="https://github.com/r-santtos" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >Github</a>
+          </li>
+
+          <li class="container">
+            <a 
+              href="https://www.linkedin.com/in/rsanttos89/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >Linkedin</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+</main>

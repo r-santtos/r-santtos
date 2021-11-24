@@ -6,6 +6,10 @@
   use \App\Model\Entity\ReturnDB;
 
   class Doc extends PatternPage {
+    private static function getAside() {
+      return View::render('_components/aside');
+    }
+
     /**
      * Método responsável por retornar view
      * @return string
@@ -30,8 +34,10 @@
           'title' => $database->title,
           'description' => 'Texto vem aqui',
           'programmingLanguage' => $programmingLanguage,
-          'pageTitle' => $pageTitle
+          'pageTitle' => $pageTitle,
+          'aside'=> self::getAside(),
         ]);
+
 
         // retorna a view page
         return parent::getPatternPage($header, $content);
