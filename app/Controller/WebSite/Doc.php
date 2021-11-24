@@ -3,7 +3,7 @@
   namespace App\Controller\WebSite;
 
   use \App\Utils\View;
-  use \App\Model\Entity\ReturnDB;
+  use \App\Model\WebSite\SelectDoc;
 
   class Doc extends PatternPage {
     private static function getAside() {
@@ -16,28 +16,33 @@
      */
     public static function getPageDoc($programmingLanguage,$pageTitle) {
       // Classe que retorna os dados do database 
-      $database = new ReturnDB;
+      if ($programmingLanguage = $doc[0]->programmingLanguage && 
+          $pageTitle = $doc[0]->pageTitle) {
 
-      if ($pageTitle == 1) {
-        /**
-         * Dados para as tags dentro de head html
-         * $header[0] = title 
-         * $header[1] = description
-         */ 
         $header = [
-          "Doc", 
-          "description"
+          // Conteúdo da tag <head>
+          $doc[0]->pageTitle,
+          $doc[0]->canonical,
+          $doc[0]->description,
+          
+          // Conteúdo das tags sociais
+          $doc[0]->secure_url,
+          $doc[0]->twitter_creator,
+          $doc[0]->og_url,
+          $doc[0]->or_image,
+          $doc[0]->or_image_width,
+          $doc[0]->or_image_height,
+          $doc[0]->or_image_alt,
+          $doc[0]->or_image_secure_url,
         ];
 
         // Retorna a view
         $content = View::render('website/doc', [
-          'title' => $database->title,
-          'description' => 'Texto vem aqui',
-          'programmingLanguage' => $programmingLanguage,
-          'pageTitle' => $pageTitle,
+          'title' => $doc[0]->pageTitle,
+          'caption' => $doc[0]->description,
+          'text' => $doc[0]->text,
           'aside'=> self::getAside(),
         ]);
-
 
         // retorna a view page
         return parent::getPatternPage($header, $content);
@@ -46,5 +51,4 @@
         return View::render('website/404');
       }
     }
-
   }
