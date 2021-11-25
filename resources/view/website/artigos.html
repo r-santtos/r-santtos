@@ -2,7 +2,7 @@
   <!-- DATE POST -->
   <section id="tab" class="container">
     <div class="container date-post" id="tab-date">
-      <p><time datetime="2021-11-05 23:00">Nov 05, 2021</time></p>
+      <p><time datetime="{{dates}}">{{datesBR}}</time></p>
       <div class="container btn-menu" onclick="openNav();">
         <span class="container"></span>
         <span class="container"></span>
@@ -33,43 +33,6 @@
     </article>
 
     <!-- ASIDE CONTAINER -->
-    <aside id="aside" class="container">
-      <div class="container global-aside">
-        <div class="container tab">
-          <a href="/" target="_blank" rel="noopener noreferrer">rsanttos</a>
-
-          <div class="container closeMenu" onclick="closeNav();">
-            <p>&#10008;</p>
-          </div>
-        </div>
-
-        <h3>Publicado por Ricardo</h3>
-        <ul class="container">
-          <li class="container">
-            <a 
-              href="https://www.instagram.com/rsanttos89/"
-              target="_blank" 
-              rel="noopener noreferrer"
-            >Instagram</a>
-          </li>
-
-          <li class="container">
-            <a 
-              href="https://github.com/r-santtos" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >Github</a>
-          </li>
-
-          <li class="container">
-            <a 
-              href="https://www.linkedin.com/in/rsanttos89/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >Linkedin</a>
-          </li>
-        </ul>
-      </div>
-    </aside>
+    {{aside}}
   </section>
 </main>

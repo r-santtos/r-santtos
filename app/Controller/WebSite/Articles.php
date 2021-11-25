@@ -6,6 +6,10 @@
   use \App\Model\WebSite\SelectArticles;
 
   class Articles extends PatternPage {
+    private static function getAsideArticles() {
+      return View::render('_components/aside_articles');
+    }
+
     /**
      * Método responsável por retornar view
      * @return string
@@ -39,7 +43,10 @@
         $content = View::render('website/artigos', [
           'title' => $articles[0]->pageTitle,
           'caption' => $articles[0]->description,
+          'dates' => $articles[0]->dates,
+          'datesBR' => date('M d, Y à\s H:i:s', strtotime($articles[0]->dates)),
           'text' => $articles[0]->text,
+          'aside'=> self::getAsideArticles(),
         ]);
 
         // retorna a view page

@@ -6,21 +6,21 @@
   use \App\Model\WebSite\SelectDocs;
 
   class Doc extends PatternPage {
-    private static function getAside() {
-      return View::render('_components/aside');
+    private static function getAsideDocJS() {
+      return View::render('_components/aside_doc_js');
     }
 
     /**
      * Método responsável por retornar view
      * @return string
      */
-    public static function getPageDoc($programmingLanguage,$pageTitle) {
+    public static function getPageDoc($programmingLanguage,$urlPage) {
       // Classe que retorna os dados do database 
       $doc = SelectDocs::getDocs();
 
       // Classe que retorna os dados do database 
       if ($programmingLanguage == $doc[0]->programmingLanguage && 
-          $pageTitle == $doc[0]->pageTitle) {
+          $urlPage == $doc[0]->urlPage) {
 
         $header = [
           // Conteúdo da tag <head>
@@ -43,8 +43,10 @@
         $content = View::render('website/doc', [
           'title' => $doc[0]->pageTitle,
           'caption' => $doc[0]->description,
+          'dates' => $doc[0]->dates,
+          'datesBR' => date('M d, Y à\s H:i:s', strtotime($doc[0]->dates)),
           'text' => $doc[0]->text,
-          'aside'=> self::getAside(),
+          'aside'=> self::getAsideDocJS(),
         ]);
 
         // retorna a view page
